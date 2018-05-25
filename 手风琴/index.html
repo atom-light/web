@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv='Content-type' content='text/html; charset=utf-8' />
+		<title>手风琴</title>
+		<!-- css -->
+		<style type='text/css'>
+			*{margin: 0;padding: 0;}
+
+			/*
+				样式的组成
+					选择器(div)和声明({})
+			*/
+			/*元素选择器*/
+			body{
+				background-color:#eee;
+			}
+			div{
+				overflow:hidden;/*规定元素溢出如何显示  hidden隐藏 重新检测盒子里面的内容*/
+				width:1160px;/*宽度*/
+				/*height:167px;/*高度  px像素/单位*/
+				background-color:#fff;/*背景 颜色 #十六进制颜色值*/
+
+
+				/*margin-top:200px;/*外边距  盒子以外的距离*/
+				/*margin-left:auto;/*自动*/
+				/*margin-right:auto;
+				margin-bottom:0;*/
+
+				/*margin:200px auto 0 auto;/*上  右 下 左*/
+				margin:200px auto 0;/*上 左右  下*/
+				padding:20px;/*内边距 盒子到内容的距离  会撑大盒子的总大小*/
+			}
+			div ul{
+				width:2000px;
+				/*display:flex;/*弹性盒模型 */
+				list-style:none;/*列表风格 去掉  去掉ulli的小黑圆点*/
+			}
+
+			/*
+				后代选择器
+			*/
+			div ul li{
+				overflow:hidden;
+				float:left;/*浮动 让元素横排显示
+				并且会脱离文档流（在页面中不占位置）父元素高度塌陷*/
+				width:185px;
+				height:125px;
+				/* border:2px solid red; *//*边框
+				border-width border-style border-color*/
+
+				margin-right:10px;
+				border-radius:5px;/*圆角*/
+				transition:0.5s cubic-bezier(.29,1.21,.52,1.47);/*过渡 css3
+				允许一个样式到一个样式有一个平滑的过渡*/
+			}
+			/*
+				:hover 伪类选择器  通过样式给元素添加动态效果
+				当鼠标划过li的时候  让li宽度发生改变
+			*/
+			div ul:hover li{
+				width:107px;
+			}
+			div ul li:hover{
+				width:575px;
+			}
+
+		</style>
+
+	</head>
+<body>
+
+	<!--
+
+	代码的原则是越简单越好
+
+		div:
+			盒子  通用型流内容 容器
+			有宽度有高度的长方形
+
+		p：段落标签 一段文字
+
+
+
+		ulli 一列以小黑圆点开头的无序列表标签
+		ul li 后代选择器
+		ul,p 多元素选择器
+		ul .muma 类选择器 class选择器
+
+		#li id选择器
+
+		img 图片标签  src 统一资源管理  写图片地址的地方
+
+
+		font <font color='' size=''></font>
+		marquee
+
+
+	-->
+
+
+	<div>
+		<ul>
+			<li><img src='images/1.jpg' /></li>
+			<li><img src='images/2.jpg' /></li>
+			<li><img src='images/3.png' /></li>
+			<li><img src='images/4.jpg' /></li>
+			<li><img src='images/5.jpg' /></li>
+			<li><img src='images/6.jpg' /></li>
+		</ul>
+	</div>
+
+</body>
+</html>
